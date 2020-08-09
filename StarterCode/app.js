@@ -4,7 +4,7 @@ var margin = {top:20, right:40, bottom: 60, left: 100};
 var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
-// Create a SVG wrapper
+// Create SVG 
 var svg = d3
     .select(".chart")
     .append("svg")
@@ -42,7 +42,8 @@ d3.csv('healthData.csv',function(err, healthData) {
         return +data.smokes;
         }),
     ]);
-
+    
+    //tooltips
 
     var toolTip = d3
         .tip()
